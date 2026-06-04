@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int first, last, count;
+
+   cout << "Enter First number: ";
+   cin >> first;
+   cout << "Enter Last number: ";
+   cin >> last;
+
+   for(int num = first; num <= last; num++)
+   { 
+      count = 0;
+
+      for(int i = 1; i <= num; i++)
+      {
+        if(num % i == 0)
+        count++;
+      }
+        if(count == 2)
+        cout << num << " ";
+    }
+     return 0;
+}
