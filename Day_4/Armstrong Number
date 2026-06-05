@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int num,OrgNum, digit, sum = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+    OrgNum = num;
+
+    while (num != 0) {
+      digit = num % 10;
+      sum = sum + digit * digit * digit;
+      num = num / 10;
+    }
+
+    if (sum == OrgNum)
+      cout << "Armstrong Number";
+    else
+      cout << "Not an Armstrong Number";
+    return 0;
+}
